@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Прайс</title>
+
+	<!-- CSS LINK -->
+			<link rel="stylesheet" href="price.css">
+	<!-- /CSS -->
+
+	<!-- JS -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- /JS -->
+
+	<!-- FONTS -->
+			<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300&family=Montserrat:wght@300;400;600;700&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+	<!-- /FONTS -->
+</head>
+<body>
+
+<!-- HEADER START -->
+	<div class="header">
+		<div class="container">
+			<div class="header__inner">
+				
+				<!-- LOGO SIDE -->
+				<div class="logo">
+					<h1 class="logo__name">NAME</h1>
+				</div>
+
+
+				<!-- NAV SIDE -->
+				<nav class="navigation">
+					<a href="index.html" class="header__link">Главная</a>
+					<a href="price.html" class="header__link">Прайс</a>
+					<a href="bought.html" class="header__link">Заказать</a>
+					<a href="aboutus.html" class="header__link">О нас</a>
+				</nav>
+
+
+			</div> <!-- /header__inner -->
+		</div> <!-- /container -->
+	</div> <!-- /header -->
+
+<div class="search">
+	<div class="container">
+		<div class="search__inner">
+			<div class="title">
+				<h1 class="title__text">ПОИСК</h1>
+			</div>
+
+			<div class="search__block">
+				<input type="text" id="search" value="Введите что нибудь" class="search__input" onblur="if(this.value == '') { this.value='Введите что нибудь'}" onfocus="if (this.value == 'Введите что нибудь') {this.value=''}">
+
+				<svg class="svg__search"
+						 xmlns="http://www.w3.org/2000/svg"
+						 xmlns:xlink="http://www.w3.org/1999/xlink"
+						 width="18px" height="18px">
+						<image class="svg__ico"  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkCgkUJB5mcXN2AAABWklEQVQoz1XRvWqUURDG8d+8Go2rJiqBtTF4EYKFSSHEKEtgCYiIoNi5fbDUO9CUiXUKsRAEUUwsjYXXIGJjJASMn2tU0LF4P/JmqjlnnvnPc+bEAOjmgutOBltWLNqAFJZQJFyx6bau19bzhAUfXIWQoAjmPfI35qOIqZyOkez76WFeK2UQgzFf80+cyq2Q1aVjNh004VNaRuEu0deWyC/myDsN6dYwQods4JX4mxGHlMajk2/K6bXNivfKqE6ZFkSqynWk5B9Z6ffbcbbs3hUGTPsdw5q0nB0zewbBeeP5oG6LwXHbhiZtN5blkXjvgHEq4/nZZYdtZL8hzcXHnMC5GlsEj90wGk/seJlrfuRTRzFm3cXmdVgxmffye87EBb/ivm5MgRd6padmfSk6GTGsTrOxCi4trcbA3mh9Ti+egZtFu7y7hoTnlafFfWdalGhlKeS7eOu03n+0cHTKbPYJ2AAAAABJRU5ErkJggg==" />
+				</svg> <!-- /svg -->
+			</div> <!-- /search__block -->
+
+		</div> <!-- /search__inner -->
+	</div> <!-- /container -->
+</div> <!-- /search -->
+
+
+<!-- SHOP BLOCK -->
+<div class="shop__filter">
+			<div class="shop__filter__inner">
+
+				<nav class="burger-menu__nav">
+					<a href="#" class="burger-menu__link" data-filter="juice">Напитки</a>
+					<a href="#" class="burger-menu__link" data-filter="bakal">Бакалея</a>
+					<a href="#" class="burger-menu__link" data-filter="kasha">Каши</a>
+					<a href="#" class="burger-menu__link" data-filter="fructs">Фрукты</a>
+					<a href="#" class="burger-menu__link" data-filter="ovoshi">Овощи</a>
+					<a href="#" class="burger-menu__link" data-filter="smesi">Смеси</a>
+					<a href="#" class="burger-menu__link" data-filter="specii">Специи</a>
+					<a href="#" class="burger-menu__link" data-filter="milks">Молочка</a>
+					<a href="#" class="burger-menu__link" data-filter="snaks">Снеки</a>
+					<a href="#" class="burger-menu__link" data-filter="all">Все</a>					
+				</nav>
+
+			</div> <!-- /shop__filter__inner -->
+		</div> <!-- /shop__filter -->
+
+
+<div class="shop" id="shop">
+		
+
+		<div class="container__shop">
+			<div class="shop__inner">	
+
+				<div class="shop__item" data-cat="juice" id="juic"> <!-- first__item -->
+					<div class="item__photo">
+						<img src="img/juice.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Сок</h1>
+						<span class="item__rev">Двух литровый сок "Моя Семья"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">200 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="juice" id="water"> <!-- second__item -->
+					<div class="item__photo">
+						<img src="img/water.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Вода</h1>
+						<span class="item__rev">Литровая вода "Borjomi"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">48 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="bakal" id="maka"> <!-- third__item -->
+					<div class="item__photo">
+						<img src="img/pasta.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Макароны</h1>
+						<span class="item__rev">Спагетти "Barilla"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">50 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="bakal" id="cheese"> <!-- quadro__item -->
+					<div class="item__photo">
+						<img src="img/cheese.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Сыр</h1>
+						<span class="item__rev">Сыр маздам выдержки 50 лет</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">210 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="kasha" id="perl"> <!-- five__item -->
+					<div class="item__photo">
+						<img src="img/perlovka.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Перловка</h1>
+						<span class="item__rev">Каша перловка от компании "Перловка"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">45 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="kasha" id="man"> <!-- six__item -->
+					<div class="item__photo">
+						<img src="img/manka.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Манная каша</h1>
+						<span class="item__rev">Манная каша от комании "Манка"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">48 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="fructs" id="apple"> <!-- seven__item -->
+					<div class="item__photo">
+						<img src="img/apple.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Яблоки</h1>
+						<span class="item__rev">Яблоки Голден на развес</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">50 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="fructs" id="grusha"> <!-- eight__item -->
+					<div class="item__photo">
+						<img src="img/grusha.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Груши</h1>
+						<span class="item__rev">Груши Ташкент на развес</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">50 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="ovoshi" id="carrot"> <!-- nine__item -->
+					<div class="item__photo">
+						<img src="img/carrot.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Морковь</h1>
+						<span class="item__rev">Морковь с грядки</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">56 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="ovoshi" id="bang"> <!-- ten__item -->
+					<div class="item__photo">
+						<img src="img/bang.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Капуста</h1>
+						<span class="item__rev">Капуста с огорода</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">82 Рубля</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="smesi" id="smesfirst"> <!-- eleven__item -->
+					<div class="item__photo">
+						<img src="img/smes.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Смесь</h1>
+						<span class="item__rev">Смесь для детей "Nutrion"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">180 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="smesi" id="smessecond"> <!-- twelwe__item -->
+					<div class="item__photo">
+						<img src="img/smes2.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Смесь</h1>
+						<span class="item__rev">Смесь для детей "GrowUp"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">195 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="specii" id="speci"> <!-- thirteen__item -->
+					<div class="item__photo">
+						<img src="img/specii.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Специи</h1>
+						<span class="item__rev">Перец острый</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">25 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="specii" id="specii"> <!-- fourteen__item -->
+					<div class="item__photo">
+						<img src="img/specii2.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Специи</h1>
+						<span class="item__rev">Красный горошек</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">25 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="milks" id="milk"> <!-- fiveteen__item -->
+					<div class="item__photo">
+						<img src="img/milk.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Молоко</h1>
+						<span class="item__rev">Молоко "Буренка"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">80 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+
+				<div class="shop__item" data-cat="snaks" id="snak"> <!-- sixteen__item -->
+					<div class="item__photo">
+						<img src="img/lays.jpg" alt="" class="item__photo">
+					</div> <!-- /photo -->
+
+					<div class="item__content">
+						<h1 class="item__title">Чипсы</h1>
+						<span class="item__rev">Чипсы "Lays"</span>
+					</div> <!-- /content -->
+
+					<div class="item__buyit">
+						<h5 class="item__price">85 Рублей</h5>
+						<input type="button" class="item__btn" onclick="this.value='Добавлено'" value="В корзину">
+					</div><!-- /buyit -->
+				</div><!-- /shop__item -->
+
+			</div> <!-- /shop__inner -->
+		</div>	<!-- /container -->
+
+</div> <!-- /shop -->
+
+
+
+
+<!-- SCRIPT SRC -->
+<script src="price.js"></script>
+
+</body>
+</html>
